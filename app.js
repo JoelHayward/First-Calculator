@@ -26,3 +26,8 @@ function calculateResult() {
   document.getElementById("display").innerHTML =
     formula + " = " + eval(formula);
 }
+
+function clearDisplay() {
+  formula = "";
+  document.getElementById("display").innerHTML = formula;
+}
