@@ -1,4 +1,5 @@
 let lightMode = true;
+let formula = "";
 
 function switchMode() {
   if (lightMode) {
@@ -12,4 +13,14 @@ function switchMode() {
     document.body.style.background = "white";
     lightMode = true;
   }
+}
+
+function addToFormula(itemToAdd) {
+  formula = formula + itemToAdd;
+  document.getElementById("display").innerHTML = formula;
+}
+
+function calculateResult() {
+  document.getElementById("display").innerHTML =
+    formula + " = " + eval(formula);
 }
